@@ -1,0 +1,17 @@
+Netz: 192.168.0.0
+Subnetmask: 255.255.255.0
+
+Router: 192.168.0.1
+	admin
+	Siemens1!
+
+WLAN:	AP_Fahrstuhl
+	Fahrstuhl_123
+
+PC: 192.168.0.10
+
+SPS: 192.168.0.20
+
+RasPI: 192.168.0.30
+	student
+	Fahrstuhl_P1
