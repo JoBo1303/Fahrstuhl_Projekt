@@ -1,0 +1,544 @@
+[
+    {
+        "id": "4b20364aab5f440c",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "71006a93fd80eccb",
+        "type": "inject",
+        "z": "4b20364aab5f440c",
+        "name": "inject_Etage",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=3;s=\"7-Segment Anzeige_DB\".\"Etage\"",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 80,
+        "wires": [
+            [
+                "bf19f6da0765c27d"
+            ]
+        ]
+    },
+    {
+        "id": "bf19f6da0765c27d",
+        "type": "OpcUa-Client",
+        "z": "4b20364aab5f440c",
+        "endpoint": "4e2252f9c02fbf5f",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "read_Etage",
+        "x": 430,
+        "y": 80,
+        "wires": [
+            [
+                "d4395a2705969ad2"
+            ]
+        ]
+    },
+    {
+        "id": "d4395a2705969ad2",
+        "type": "ui_gauge",
+        "z": "4b20364aab5f440c",
+        "name": "gauge_Etage",
+        "group": "6ad2d86503bbbc7b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Etage",
+        "label": "",
+        "format": "{{value}}",
+        "min": "1",
+        "max": "3",
+        "colors": [
+            "#e9cd1c",
+            "#e9cd1c",
+            "#e9cd1c"
+        ],
+        "seg1": "2",
+        "seg2": "",
+        "diff": false,
+        "className": "gauge",
+        "x": 710,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "79b860cbdb4ba1c8",
+        "type": "OpcUa-Client",
+        "z": "4b20364aab5f440c",
+        "endpoint": "4e2252f9c02fbf5f",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "read_Tür1",
+        "x": 430,
+        "y": 140,
+        "wires": [
+            [
+                "54d1626bc8413994"
+            ]
+        ]
+    },
+    {
+        "id": "43dfd09876befb26",
+        "type": "OpcUa-Client",
+        "z": "4b20364aab5f440c",
+        "endpoint": "4e2252f9c02fbf5f",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "read_Tür2",
+        "x": 430,
+        "y": 200,
+        "wires": [
+            [
+                "453f293d2d400cb3"
+            ]
+        ]
+    },
+    {
+        "id": "dc62ea44a34a2b44",
+        "type": "OpcUa-Client",
+        "z": "4b20364aab5f440c",
+        "endpoint": "4e2252f9c02fbf5f",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "read_Tür3",
+        "x": 430,
+        "y": 260,
+        "wires": [
+            [
+                "0a5cc60a5963e85a"
+            ]
+        ]
+    },
+    {
+        "id": "412745acc8b9a92a",
+        "type": "OpcUa-Client",
+        "z": "4b20364aab5f440c",
+        "endpoint": "4e2252f9c02fbf5f",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "read_Betriebsart",
+        "x": 450,
+        "y": 320,
+        "wires": [
+            [
+                "98b636266a6bf710"
+            ]
+        ]
+    },
+    {
+        "id": "14843d16cc10a363",
+        "type": "inject",
+        "z": "4b20364aab5f440c",
+        "name": "inject_Tür1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=3;s=\"Merker_DB\".\"Tür1\"",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "79b860cbdb4ba1c8"
+            ]
+        ]
+    },
+    {
+        "id": "83fde9b6edcfa349",
+        "type": "inject",
+        "z": "4b20364aab5f440c",
+        "name": "inject_Tür2",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=3;s=\"Merker_DB\".\"Tür2\"",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 200,
+        "wires": [
+            [
+                "43dfd09876befb26"
+            ]
+        ]
+    },
+    {
+        "id": "cc2cecee54928211",
+        "type": "inject",
+        "z": "4b20364aab5f440c",
+        "name": "inject_Tür3",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=3;s=\"Merker_DB\".\"Tür3\"",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 260,
+        "wires": [
+            [
+                "dc62ea44a34a2b44"
+            ]
+        ]
+    },
+    {
+        "id": "bb77cd10b097d84b",
+        "type": "inject",
+        "z": "4b20364aab5f440c",
+        "name": "inject_Betriebsart",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=3;s=\"Merker_DB\".\"Betriebsart\"",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 320,
+        "wires": [
+            [
+                "412745acc8b9a92a"
+            ]
+        ]
+    },
+    {
+        "id": "54d1626bc8413994",
+        "type": "ui_text",
+        "z": "4b20364aab5f440c",
+        "group": "cb2b5940c56f280b",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Zustand Tür 1",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 720,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "453f293d2d400cb3",
+        "type": "ui_text",
+        "z": "4b20364aab5f440c",
+        "group": "cb2b5940c56f280b",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Zustand Tür 2",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 720,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "0a5cc60a5963e85a",
+        "type": "ui_text",
+        "z": "4b20364aab5f440c",
+        "group": "cb2b5940c56f280b",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Zustand Tür 3",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 720,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "98b636266a6bf710",
+        "type": "ui_text",
+        "z": "4b20364aab5f440c",
+        "group": "d6c84926965dc71f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Betriebsart",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 710,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "591f4394d548ae20",
+        "type": "OpcUa-Client",
+        "z": "4b20364aab5f440c",
+        "endpoint": "4e2252f9c02fbf5f",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "read_Fahrstuhl",
+        "x": 440,
+        "y": 380,
+        "wires": [
+            [
+                "810f7bc3028aee3e"
+            ]
+        ]
+    },
+    {
+        "id": "fe6028f4bd041db5",
+        "type": "inject",
+        "z": "4b20364aab5f440c",
+        "name": "inject_Fahrstuhl",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=3;s=\"Merker_DB\".\"Fahrt_Fahrstuhl\"",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 380,
+        "wires": [
+            [
+                "591f4394d548ae20"
+            ]
+        ]
+    },
+    {
+        "id": "810f7bc3028aee3e",
+        "type": "ui_text",
+        "z": "4b20364aab5f440c",
+        "group": "d6c84926965dc71f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Fahrstuhl fährt",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 720,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "4e2252f9c02fbf5f",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://192.168.0.20:4840",
+        "secpol": "None",
+        "secmode": "None",
+        "none": true,
+        "login": false,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
+    },
+    {
+        "id": "6ad2d86503bbbc7b",
+        "type": "ui_group",
+        "name": "Allgemeines",
+        "tab": "806f5bc183583c6f",
+        "order": 2,
+        "disp": false,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cb2b5940c56f280b",
+        "type": "ui_group",
+        "name": "Türen",
+        "tab": "806f5bc183583c6f",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d6c84926965dc71f",
+        "type": "ui_group",
+        "name": "Fahrstuhl",
+        "tab": "806f5bc183583c6f",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "806f5bc183583c6f",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
